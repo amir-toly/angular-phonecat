@@ -2,12 +2,18 @@ describe('phoneList', function() {
 	beforeEach(module('phoneList'));
 	
 	describe('PhoneListController', function() {
+		var ctrl;
 
-		it('should create a "phones" model with 3 phones and a "name" model saying "world"', inject(function($componentController) {
-			var ctrl = $componentController('phoneList');
-
-			expect(ctrl.phones.length).toBe(3);
-			expect(ctrl.name).toBe('world');
+		beforeEach(inject(function($componentController) {
+			ctrl = $componentController('phoneList');
 		}));
+
+		it('should create a "phones" model with 3 phones', function() {
+			expect(ctrl.phones.length).toBe(3);
+		});
+
+		/*it('should set a default value for the "orderProp" model', function() {
+			expect(ctrl.orderProp).toBe('age');
+		});*/
 	});
 });
