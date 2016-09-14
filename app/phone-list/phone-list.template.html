@@ -11,11 +11,8 @@
 				Sort by:
 				<select ng-model="$ctrl.orderProp">
 					<option value="name">Alphabetical</option>
-					<option value="-age">Oldest</option>
+					<option value="age">Newest</option>
 				</select>
-			</p>
-			<p>
-				Sorted by: {{$ctrl.orderProp}}
 			</p>
 		</div>
 		<div class="col-md-10">
@@ -30,3 +27,4 @@
 		</div>
 	</div>
 </div>
+<pre>{{$ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp | json}}</pre>
