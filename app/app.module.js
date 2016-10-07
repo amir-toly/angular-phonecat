@@ -1,4 +1,6 @@
 // Define the 'phonecatApp' module
 angular.module('phonecatApp', [
-	'phoneList'
+	'ngRoute',
+	'phoneList',
+	'phoneDetail'
 ]);

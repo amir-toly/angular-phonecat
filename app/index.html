@@ -5,18 +5,17 @@
     <title>My HTML File</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="phone-list/phone-list.module.js"></script>
     <script src="phone-list/phone-list.component.js"></script>
+    <script src="phone-detail/phone-detail.module.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script>
   </head>
   <body>
 
-	<fieldset>
-		<legend>First list</legend>
-		<phone-list></phone-list>
-	</fieldset>
-
-	<p>Should display nothing: <em>{{$ctrl.query}}</em></p>
+	<div ng-view></div>
 
   </body>
 </html>
