@@ -75,13 +75,6 @@ describe('PhoneCat Application', function() {
     it('should display the "nexus-s" page', function() {
       expect(element(by.binding('$ctrl.phone.name')).getText()).toBe('Nexus S');
     });
-
-    it('should display 4 thumbnail images', function() {
-      var phoneThumbs = element(by.className('phone-thumbs'));
-      var imagesList = phoneThumbs.all(by.tagName('img'));
-      
-      expect(imagesList.count()).toBe(4);
-    });
   });
 
 });

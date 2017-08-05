@@ -6,7 +6,7 @@ angular.module('phoneList').component('phoneList', {
 			var self = this;
 
 			$http.get('phones/phones.json').then(function(response) {
-				self.phones = response.data.slice(0, 5);
+				self.phones = response.data;
 			});
 
 			self.orderProp = 'age';
